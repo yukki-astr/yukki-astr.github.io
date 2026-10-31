@@ -1,88 +1,137 @@
-/* サイト全体の基本設定 */
+/* 全体の基本設定（白背景・ダークブルーのテキスト） */
 body {
-    background-color: #0d1117; /* 宇宙のような深いネイビー/黒 */
-    color: #c9d1d9; /* 読みやすいライトグレー */
+    background-color: #fafafa;
+    color: #333;
     font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    line-height: 1.6;
-    max-width: 800px; /* 画面が広すぎないように幅を制限 */
-    margin: 0 auto; /* 画面の中央に配置 */
-    padding: 40px 20px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
 }
 
-/* 見出しのデザイン */
-h1, h2 {
-    color: #58a6ff; /* テクノロジー感のあるアクセントブルー */
-    border-bottom: 1px solid #30363d; /* 下線を追加 */
-    padding-bottom: 8px;
-    margin-top: 40px;
-}
-
-/* リスト（所属やスキル）のデザイン */
-ul {
-    background-color: #161b22; /* リスト部分の背景を少し明るく */
+/* ヘッダー・ナビゲーション */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px 40px;
-    border-radius: 8px; /* 角を少し丸くする */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* 少し立体感を出す */
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: sticky; /* スクロールしてもメニューが上部に追従します */
+    top: 0;
+    z-index: 100;
 }
-
-li {
-    margin-bottom: 10px;
-}
-
-/* 太字（スキル名など）の色 */
-strong {
-    color: #79c0ff;
-}
-/* ナビゲーションメニューのデザイン */
-nav {
-    text-align: center;
-    margin-bottom: 40px;
+.logo a {
+    font-weight: bold;
+    color: #002b5c;
+    text-decoration: none;
+    letter-spacing: 1px;
 }
 nav ul {
-    background-color: transparent;
-    box-shadow: none;
-    padding: 0;
-    display: inline-flex;
-    gap: 20px; /* ボタン同士の隙間 */
-}
-nav li {
-    list-style: none; /* リストの点を消す */
+    list-style: none;
+    display: flex;
+    gap: 30px;
     margin: 0;
+    padding: 0;
 }
 nav a {
-    color: #c9d1d9;
     text-decoration: none;
-    font-weight: bold;
-    padding: 10px 20px;
-    border: 1px solid #30363d;
-    border-radius: 6px;
-    transition: 0.3s; /* マウスを乗せたときのアニメーション */
+    color: #666;
+    font-size: 0.95em;
+    transition: 0.2s;
 }
 nav a:hover {
-    background-color: #30363d;
-    color: #58a6ff;
+    color: #002b5c;
 }
 
-/* サイト内のすべてのリンク文字色 */
-a {
-    color: #58a6ff;
-    text-decoration: none;
+/* メインコンテンツ枠 */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px;
 }
-a:hover {
+
+/* トップの紹介文 */
+.hero {
+    margin-bottom: 80px;
+}
+.hero h1 {
+    color: #002b5c;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+.hero .affiliation {
+    font-weight: bold;
+    color: #002b5c;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+.hero .intro {
+    color: #555;
+}
+
+/* 画像のような左右分割（2カラム）のレイアウト */
+.two-column-section {
+    display: flex;
+    border-top: 1px solid #eaeaea;
+    padding: 50px 0;
+}
+.section-title {
+    flex: 0 0 250px; /* 左側のタイトルの幅 */
+}
+.section-title h2 {
+    color: #002b5c;
+    margin: 0;
+    font-size: 1.4em;
+}
+.section-content {
+    flex: 1; /* 右側のコンテンツ領域 */
+}
+
+/* 経歴や自己紹介の表デザイン */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.info-table th, .info-table td {
+    padding: 15px 0;
+    border-bottom: 1px solid #eaeaea;
+    text-align: left;
+    font-weight: normal;
+    vertical-align: top;
+}
+.info-table th {
+    width: 220px;
+    color: #111;
+}
+.info-table td {
+    color: #333;
+}
+/* 最後の行の下線を消す */
+.info-table tr:last-child th,
+.info-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* リンクとリストのデザイン */
+a {
+    color: #002b5c;
     text-decoration: underline;
 }
-
-/* 日記の各記事の枠デザイン */
-.diary-entry {
-    background-color: #161b22;
-    padding: 20px 30px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border-left: 4px solid #58a6ff; /* 左側に青いアクセントライン */
+a:hover {
+    opacity: 0.7;
 }
-.diary-entry h2 {
-    margin-top: 0;
-    border-bottom: none;
-    font-size: 1.2em;
-    padding-bottom: 0;
+.link-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.link-list li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+.link-list li::before {
+    content: "• ";
+    color: #002b5c;
+    font-weight: bold;
+    margin-right: 8px;
 }

@@ -3,49 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>浅賀 勇輝 | Portfolio</title>
+    <title>浅賀 勇輝 / YUKI ASAKA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ページ上のナビゲーションメニュー -->
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="diary.html">Diary</a></li>
-        </ul>
-    </nav>
+    <!-- ヘッダー・ナビゲーション -->
+    <header>
+        <div class="logo"><a href="index.html">浅賀 勇輝 / YUKI ASAKA</a></div>
+        <nav>
+            <ul>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#materials">ゼミ資料</a></li>
+                <li><a href="#history">経歴</a></li>
+                <li><a href="#links">リンク</a></li>
+                <li><a href="diary.html">日記</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>浅賀 勇輝</h1>
-    <p>東邦大学 理学部 物理学科 1年</p>
+    <main>
+        <!-- トップの紹介文 -->
+        <section class="hero">
+            <h1>浅賀 勇輝 / Yuki Asaka</h1>
+            <p class="affiliation">東邦大学 理学部 物理学科 1年<br>
+            インカレロケットサークル「CORE」simulation班</p>
+            
+            <p class="intro">
+                理論・宇宙物理学、航空宇宙系に興味を持って活動しています。<br>
+                <strong>このページは、主に輪読ゼミなどで作成した資料を保管・共有するための場所です。</strong>
+            </p>
+        </section>
 
-    <h2>About Me</h2>
-    <p>理論物理学や航空宇宙に興味を持って活動しています。</p>
+        <!-- 自己紹介セクション（2カラム） -->
+        <section id="about" class="two-column-section">
+            <div class="section-title">
+                <h2>自己紹介</h2>
+            </div>
+            <div class="section-content">
+                <table class="info-table">
+                    <tr>
+                        <th>氏名</th>
+                        <td>浅賀 勇輝</td>
+                    </tr>
+                    <tr>
+                        <th>所属</th>
+                        <td>東邦大学 理学部 物理学科</td>
+                    </tr>
+                    <tr>
+                        <th>学年</th>
+                        <td>1年</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
 
-    <h2>活動・参加プログラム</h2>
-    <ul>
-        <li>数物セミナー 31th 電磁気学班</li>
-        <li>りゼミ 6th 熱力学班 1班</li>
-        <li>2026 測地学サマースクール</li>
-    </ul>
+        <!-- ゼミ資料セクション -->
+        <section id="materials" class="two-column-section">
+            <div class="section-title">
+                <h2>ゼミ資料</h2>
+            </div>
+            <div class="section-content">
+                <ul class="link-list">
+                    <!-- PDFなどのファイルリンクをここに貼ります -->
+                    <li><a href="#">『ベクトル解析』輪読資料（サンプル）</a></li>
+                    <li><a href="#">『熱力学』輪読資料（サンプル）</a></li>
+                    <li><a href="#">『量子力学』輪読資料（サンプル）</a></li>
+                </ul>
+            </div>
+        </section>
 
-    <h2>所属</h2>
-    <ul>
-        <li>ロケットサークル「CORE」 simulation班</li>
-    </ul>
+        <!-- 経歴セクション -->
+        <section id="history" class="two-column-section">
+            <div class="section-title">
+                <h2>経歴</h2>
+            </div>
+            <div class="section-content">
+                <table class="info-table">
+                    <tr>
+                        <th>2022年4月〜2025年3月</th>
+                        <td>栃木県立栃木高等学校</td>
+                    </tr>
+                    
+                
+                
+                    
+                    <tr>
+                        <th>2026年4月〜現在</th>
+                        <td>東邦大学 理学部 物理学科</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
 
-    <h2>Skills</h2>
-    <ul>
-        <li><strong>シミュレーション:</strong> OpenRocket</li>
-        <li><strong>開発・モデリング:</strong> VS Code, CAD</li>
-        <li><strong>文書作成:</strong> LaTeX</li>
-    </ul>
-
-    <!-- 各種リンクの追加 -->
-    <h2>Links / Contact</h2>
-    <ul>
-        <li><a href="mailto:yukityaki@gmail.com">Email (Gmail)</a></li>
-        <li><a href="https://note.com/rich_iris49" target="_blank">note</a></li>
-        <li><a href="https://www.linkedin.com/in/9/勇輝-浅賀-28101543" target="_blank">LinkedIn</a></li>
-    </ul>
+        <!-- リンク・連絡先セクション -->
+        <section id="links" class="two-column-section">
+            <div class="section-title">
+                <h2>リンク</h2>
+            </div>
+            <div class="section-content">
+                <ul class="link-list">
+                    <li><a href="mailto:yukityaki@gmail.com">e-mail : yukityaki@gmail.com</a></li>
+                    <li><a href="https://note.com/rich_iris49ID" target="_blank">note : @rich_iris49ID</a></li>
+                    <li><a href="https://www.linkedin.com/in/勇輝-浅賀-281015439/ID" target="_blank">LinkedIn (浅賀 勇輝)</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
+    
