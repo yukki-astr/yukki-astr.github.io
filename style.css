@@ -179,3 +179,13 @@ a:hover {
         border-bottom: none;
     }
 }
+/* 4. スマホ画面で名前が改行されないように文字サイズを調整 */
+    .hero h1 {
+        font-size: 1.4em; /* 文字を少し小さくする */
+        white-space: nowrap; /* 強制的に1行にする */
+    }
+    
+    /* 上部のロゴ文字も少し小さくして重なりを防ぐ */
+    .logo a {
+        font-size: 0.9em;
+    }
