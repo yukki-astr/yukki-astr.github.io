@@ -135,3 +135,47 @@ a:hover {
     font-weight: bold;
     margin-right: 8px;
 }
+/* === スマートフォン向けのレイアウト調整（一番下に追加） === */
+@media screen and (max-width: 768px) {
+    /* 1. ヘッダーとメニューを縦並び・折り返しに変更 */
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    /* 2. 左右分割（2カラム）を解除して縦並びに変更 */
+    .two-column-section {
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    .section-title {
+        flex: none;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    /* 3. 経歴などの表（テーブル）が潰れるのを防ぐために縦に配置 */
+    .info-table th, .info-table td {
+        display: block; 
+        width: 100%;
+        border-bottom: none;
+        padding: 5px 0;
+    }
+    .info-table th {
+        padding-top: 15px;
+        color: #60a5fa; /* 見出しを少し目立たせる（白テーマの場合は #002b5c に変更） */
+    }
+    .info-table td {
+        padding-bottom: 15px;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.2); /* 控えめな区切り線 */
+    }
+    .info-table tr:last-child td {
+        border-bottom: none;
+    }
+}
