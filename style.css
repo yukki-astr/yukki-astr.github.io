@@ -33,3 +33,56 @@ li {
 strong {
     color: #79c0ff;
 }
+/* ナビゲーションメニューのデザイン */
+nav {
+    text-align: center;
+    margin-bottom: 40px;
+}
+nav ul {
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px; /* ボタン同士の隙間 */
+}
+nav li {
+    list-style: none; /* リストの点を消す */
+    margin: 0;
+}
+nav a {
+    color: #c9d1d9;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    transition: 0.3s; /* マウスを乗せたときのアニメーション */
+}
+nav a:hover {
+    background-color: #30363d;
+    color: #58a6ff;
+}
+
+/* サイト内のすべてのリンク文字色 */
+a {
+    color: #58a6ff;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* 日記の各記事の枠デザイン */
+.diary-entry {
+    background-color: #161b22;
+    padding: 20px 30px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border-left: 4px solid #58a6ff; /* 左側に青いアクセントライン */
+}
+.diary-entry h2 {
+    margin-top: 0;
+    border-bottom: none;
+    font-size: 1.2em;
+    padding-bottom: 0;
+}
